@@ -17,6 +17,7 @@ class Dor(models.Model):
         choices=STATUS_CHOICES,  # Restrict values to the choices defined
         default='opened',  # Default value
     )
+    place = models.CharField(max_length=255)
     home = models.ForeignKey(
         Home,  # The related model (Home)
         on_delete=models.CASCADE,  # Delete associated Dor when the related Home is deleted
